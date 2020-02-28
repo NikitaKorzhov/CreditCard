@@ -1,0 +1,29 @@
+<div class="flip-container">
+ <div class="flipper"  [style.transform]="a">
+ <div class="front">
+<div id="front">
+    <img id="BG" src="assets/j.svg" />
+   
+    <div id="number">
+        <input   [textMask]="{mask:mask}" placeholder="9999999" [(ngModel)]="card"/>
+    </div>
+    <div id="CV">
+        <div class="dat"><input [(ngModel)]="day"/></div>/<div class="dat"><input [(ngModel)]="mounth" /></div>           
+    </div>
+</div>
+
+
+</div>
+<div class="back">
+    <div id="front">
+    <img id="BACK" src="assets/b.svg"/>
+    <div id="CVV">
+        <input/>
+        <p class="CVVT">CVV</p>
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+<button class="bn btn-primary" (click)="tr()">fk</button>

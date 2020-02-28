@@ -1,0 +1,172 @@
+#front{
+    position: relative;
+    width: 434px;
+    height: 236px;
+    left:0px;
+    top:0px;
+    font-size: 14px;
+    font-family: cursive;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 16px;
+    letter-spacing: 1px;
+    color:#d8d8d8;
+}
+
+#BG{
+    position: absolute;
+    width: 434px;
+    height: 236px;
+    left:0px;
+    top:0px
+}
+#BACK{
+    position: absolute;
+    width: 434px;
+    height: 236px;
+    left:0px;
+    top:0px
+}
+body{
+    font-size: 20px;
+    font-family: cursive;
+    font-style: normal;
+    line-height: 23px;
+    color: #ffffff;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.323);
+    
+    text-align: center;
+}
+#number{
+    position: absolute;
+    width:332px;
+    height: 28px;
+    left: 51px;
+    top:99px;
+    display: flex;
+}
+#CV{
+    position: absolute;
+    width:70px;
+    display: flex;
+    height: 28px;
+    left: 195px;
+    top:155px;
+    opacity: 0.42;
+}
+.num{
+    margin-right: 30px;
+    margin-left: 0px;
+    width:60px;
+    height: 28px;
+}
+.num1{
+     margin-right: 32px;
+    margin-left: 0px;
+    width:60px;
+    height: 28px;
+}
+.num0{
+    margin-right: 0px;
+    margin-left: 0px;
+    width:60px;
+    height: 28px;
+}
+.dat{
+    margin-left: 0px;
+    width:27px;
+    height: 28px;
+    margin-right: 5px;
+}
+input:focus{
+    background-color: transparent;
+    border: none;
+    border-bottom: #d8d8d8 solid 2px;
+opacity: 1;
+}
+input{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-family: cursive;
+    font-style: normal;
+    line-height: 23px;
+    color: #ffffff;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    border-bottom: #d8d8d8 solid 2px;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.323);
+    opacity: 0.42;
+    
+}
+
+#CVV{
+    position: absolute;
+    width: 50px;
+    left: 285px;
+    top: 99px;
+    text-align: center;
+}
+.CVVT{
+    text-align: center;
+    margin-top: 4px;
+    opacity: 0.2;;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.flip-container {
+    perspective: 1000;
+   }
+    /* переверните сторону при проведении мышью */
+    .flip-container:hover .flipper, .flip-container.hover .flipper {
+     transform: rotateY(180deg);
+    }
+   
+   .flip-container, .front, .back {
+    width: 434px;
+    height: 236px;
+    transition: 3s linear;
+   }
+   
+   /* здесь находится скорость перевертывания */
+   .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    transition: 1.3s linear;
+    position: relative;
+   }
+   
+   /* скройте обратную сторону во время переворота */
+   .front, .back {
+    backface-visibility: hidden;
+   
+    position: absolute;
+    top: 0;
+    left: 0;
+   }
+   
+   /* лицевая сторона размещена над обратной */
+   .front {
+    z-index: 2;
+   }
+   
+   /* обратная, изначально скрытая сторона */
+   .back {
+    transform: rotateY(180deg);
+   }
