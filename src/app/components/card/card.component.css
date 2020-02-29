@@ -20,6 +20,13 @@
     left:0px;
     top:0px
 }
+#logo{
+    position: absolute;
+    width: 62px;
+    
+    left:351px;
+    top: 21px;
+}
 #BACK{
     position: absolute;
     width: 434px;

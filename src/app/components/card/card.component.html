@@ -1,14 +1,14 @@
-<div class="flip-container">
- <div class="flipper"  [style.transform]="a">
+<div class="flip-container" style="margin: 0 auto; text-align: center;">
+ <div class="flipper" style="margin: 0 auto; text-align: center;"  [style.transform]="cardd.card.rotate">
  <div class="front">
 <div id="front">
     <img id="BG" src="assets/j.svg" />
-   
+    <img id="logo" [src]="logo()"/>
     <div id="number">
-        <input   [textMask]="{mask:mask}" placeholder="9999999" [(ngModel)]="card"/>
+        <input   [textMask]="{mask:cardd.card.mask}" placeholder="9999999" [(ngModel)]="cardd.card.number"/>
     </div>
     <div id="CV">
-        <div class="dat"><input [(ngModel)]="day"/></div>/<div class="dat"><input [(ngModel)]="mounth" /></div>           
+        <div class="dat"><input /></div>/<div class="dat"><input /></div>           
     </div>
 </div>
 
@@ -26,4 +26,4 @@
 </div>
 
 </div>
-<button class="bn btn-primary" (click)="tr()">fk</button>
+<button class="bn btn-primary" (click)="tr()">turn card</button>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { cardService } from '../../shared/card.service';
 
 @Component({
   selector: 'app-card',
@@ -7,19 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class CardComponent implements OnInit {
-  inp:string;
-  day:number;
-  card:number
-  mounth:string;
-  a:string;
-  public mask = [ /[1-9]/, /\d/, /\d/, /\d/, ' ',' ', /\d/, /\d/, /\d/, /\d/, ' ',' ', /\d/, /\d/, /\d/, /\d/,' ',' ', /\d/, /\d/, /\d/, /\d/]
+  inp: string;
+  day: number;
 
-  constructor() { }
+  constructor(public cardd: cardService) { }
 
   ngOnInit(): void {
-    this.inp="";
-    this.a="rotateY(0deg)"
   }
-  cl(){console.log(this.card)}
-  tr(){this.a=this.a=="rotateY(180deg)"?"rotateY(0deg)":"rotateY(180deg)"}
+  
+  logo(){return `assets/${this.cardd.typeCard()}.png`}
+  tr() { this.cardd.transform() }
 }
