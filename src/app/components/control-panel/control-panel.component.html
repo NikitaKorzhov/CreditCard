@@ -1,0 +1,5 @@
+<div class="ci">
+    <button class="button y is-rounded is-outlined" *ngIf="!cardd.card.face" style="float: left;" (click)="tr()">Back</button>
+    <button class="button y is-rounded is-outlined" *ngIf="cardd.card.face"  style="float: right;" (click)="tr()">Next</button>
+    <button class="button y is-rounded is-outlined" *ngIf="  isSubmit()"  style="float: right;" (click)="message()">submit</button>
+</div>

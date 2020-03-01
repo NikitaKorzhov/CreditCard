@@ -17,7 +17,10 @@ export class KeyButtonComponent implements OnInit {
   }
   cl(event){
    // alert(this.cardd.card.number)
-    this.cardd.card.cvv+=event.target.value;
+   this.cardd.card.cvv.length<3?this.cardd.card.cvv+=event.target.value:"";
   }
+  del(){
+    this.cardd.card.cvv=this.cardd.card.cvv.substr(0,this.cardd.card.cvv.length-1);
+    }
 
 }

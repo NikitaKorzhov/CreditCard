@@ -19,7 +19,7 @@
            <div id="front">
            <img id="BACK" src="assets/b.svg"/>
            <div id="CVV">
-               <input [(ngModel)]="cardd.card.cvv" maxlength="4"/>
+               <input [textMask]="{mask:cvvMaskl}" [(ngModel)]="cardd.card.cvv"/>
                <p class="CVVT">CVV</p>
            </div>
        </div>
@@ -27,5 +27,5 @@
        </div>
        
        </div>
-       <button class="bn btn-primary" (click)="tr()">turn card</button>
+       
 </div>

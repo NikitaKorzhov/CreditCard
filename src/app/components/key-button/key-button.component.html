@@ -1,1 +1,4 @@
-<button class="btn btn-danger" style=" margin: 2px; width: 130px; height: 130px;" (click)="cl($event)" *ngFor="let nomber of cardd.ar" [value]="nomber">{{nomber}}</button>
+<div class="numbers">
+    <button class="button"  (click)="cl($event)" *ngFor="let nomber of cardd.ar" [value]="nomber">{{nomber}}</button>
+    <button class="button del" *ngIf="!cardd.card.face" (click)="del()">Del</button>
+</div>
