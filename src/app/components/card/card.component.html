@@ -1,29 +1,31 @@
-<div class="flip-container" style="margin: 0 auto; text-align: center;">
- <div class="flipper" style="margin: 0 auto; text-align: center;"  [style.transform]="cardd.card.rotate">
- <div class="front">
-<div id="front">
-    <img id="BG" src="assets/j.svg" />
-    <img id="logo" [src]="logo()"/>
-    <div id="number">
-        <input   [textMask]="{mask:cardd.card.mask}" placeholder="9999999" [(ngModel)]="cardd.card.number"/>
-    </div>
-    <div id="CV">
-        <div class="dat"><input /></div>/<div class="dat"><input /></div>           
-    </div>
+<div class="c" style="margin: 0 auto; text-align: center;">
+    <div class="flip-container" style="margin: 0 auto; text-align: center;">
+        <div class="flipper" style="margin: 0 auto; text-align: center;"  [style.transform]="cardd.card.rotate">
+        <div class="front">
+       <div id="front">
+           <img id="BG" src="assets/j.svg" />
+           <img id="logo" [src]="logo()"/>
+           <div id="number">
+               <input   [textMask]="{mask:cardd.card.mask}" placeholder="9999999" [(ngModel)]="cardd.card.number"/>
+           </div>
+           <div id="CV">
+               <div class="dat"><input /></div>/<div class="dat"><input /></div>           
+           </div>
+       </div>
+       
+       
+       </div>
+       <div class="back">
+           <div id="front">
+           <img id="BACK" src="assets/b.svg"/>
+           <div id="CVV">
+               <input [(ngModel)]="cardd.card.cvv" maxlength="4"/>
+               <p class="CVVT">CVV</p>
+           </div>
+       </div>
+       </div>
+       </div>
+       
+       </div>
+       <button class="bn btn-primary" (click)="tr()">turn card</button>
 </div>
-
-
-</div>
-<div class="back">
-    <div id="front">
-    <img id="BACK" src="assets/b.svg"/>
-    <div id="CVV">
-        <input/>
-        <p class="CVVT">CVV</p>
-    </div>
-</div>
-</div>
-</div>
-
-</div>
-<button class="bn btn-primary" (click)="tr()">turn card</button>

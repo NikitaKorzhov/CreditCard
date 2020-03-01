@@ -1,3 +1,20 @@
+.container{
+    width: 434px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #front{
     position: relative;
     width: 434px;
@@ -176,4 +193,9 @@ input{
    /* обратная, изначально скрытая сторона */
    .back {
     transform: rotateY(180deg);
+   }
+
+
+   .c{
+       width: 434px;
    }

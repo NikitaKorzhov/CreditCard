@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
 import { FormsModule } from '@angular/forms';
 import { TextMaskModule } from 'angular2-text-mask';
+import { KeyButtonComponent } from './components/key-button/key-button.component';
  
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent
+    CardComponent,
+    KeyButtonComponent
   ],
   imports: [
     BrowserModule,
