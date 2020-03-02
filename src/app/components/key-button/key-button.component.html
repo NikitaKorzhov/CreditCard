@@ -1,4 +1,4 @@
 <div class="numbers">
-    <button class="button"  (click)="cl($event)" *ngFor="let nomber of cardd.ar" [value]="nomber">{{nomber}}</button>
+    <button class="button"  (click)="cl($event)" *ngFor="let nomber of keyboard.keys" [value]="nomber">{{nomber}}</button>
     <button class="button del" *ngIf="!cardd.card.face" (click)="del()">Del</button>
 </div>

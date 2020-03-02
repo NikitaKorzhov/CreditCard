@@ -6,10 +6,10 @@
            <img id="BG" src="assets/j.svg" />
            <img id="logo" [src]="logo()"/>
            <div id="number">
-               <input   [textMask]="{mask:cardd.card.mask}" placeholder="9999999" [(ngModel)]="cardd.card.number"/>
+               <input   [textMask]="{mask:numberMask}" placeholder="0000  0000  0000  0000" [(ngModel)]="number" (ngModelChange)="fromNumberToModel($event)"/>
            </div>
            <div id="CV">
-               <div class="dat"><input /></div>/<div class="dat"><input /></div>           
+               <div class="dat"><input [(ngModel)]="cardd.card.mounth" [textMask]="{mask:mounthMask}" /></div>/<div class="dat"><input [(ngModel)]="cardd.card.year" [textMask]="{mask:yearMask}"/></div>           
            </div>
        </div>
        

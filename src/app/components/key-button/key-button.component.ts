@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Directive, ElementRef } from '@angular/core';
 import { cardService } from '../../shared/card.service';
+import { KeyboardService } from '../../shared/keyboard/keyboard.service';
 
 @Component({
   selector: 'app-key-button',
@@ -8,19 +9,19 @@ import { cardService } from '../../shared/card.service';
   styleUrls: ['./key-button.component.css']
 })
 export class KeyButtonComponent implements OnInit {
-  value:string;
-  b:object
-  constructor(public cardd: cardService,el:ElementRef) {this.value=el.nativeElement.value}
+  value: string;
+  b: object
+  constructor(public cardd: cardService, el: ElementRef,public keyboard:KeyboardService) { this.value = el.nativeElement.value }
 
   ngOnInit(): void {
-    this.b=this.cardd.ar
+    
   }
-  cl(event){
-   // alert(this.cardd.card.number)
-   this.cardd.card.cvv.length<3?this.cardd.card.cvv+=event.target.value:"";
+  cl(event) {
+    // alert(this.cardd.card.number)
+    this.cardd.addToCvv(event.target.value);
   }
-  del(){
-    this.cardd.card.cvv=this.cardd.card.cvv.substr(0,this.cardd.card.cvv.length-1);
-    }
+  del() {
+    this.cardd.dellFromCvvLast()
+  }
 
 }

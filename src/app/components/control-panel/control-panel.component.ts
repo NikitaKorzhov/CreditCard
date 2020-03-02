@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { cardService } from '../../shared/card.service';
+import { KeyboardService } from '../../shared/keyboard/keyboard.service';
 
 @Component({
   selector: 'app-control-panel',
@@ -8,13 +9,29 @@ import { cardService } from '../../shared/card.service';
 })
 export class ControlPanelComponent implements OnInit {
 
-  constructor(public cardd: cardService) { }
+  constructor(public cardd: cardService,public keyboard:KeyboardService) { }
 
   ngOnInit(): void {
   }
   isCVV(){return this.cardd.card.cvv.length==3}
-  isSubmit() {return !this.cardd.card.face&&this.isCVV()}
-  message(){alert(this.cardd.card.number)}
-  tr() { this.cardd.transform() }
+  isSubmit() {return !this.cardd.card.face&&this.isCVV()&&this.cardd.card.number.length==16}
+  message(){this.cardd.alertCard()}
+
+
+
+
+
+
+
+
+  tr() { 
+this.keyboard.shufleKeys()
+    this.cardd.transform() 
+  }
+  
+  back() { 
+    this.keyboard.delKeys()
+        this.cardd.transform() 
+      }
 
 }
